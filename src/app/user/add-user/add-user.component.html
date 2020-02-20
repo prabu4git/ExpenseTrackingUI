@@ -1,34 +1,34 @@
 <div class="col-md-6 user-container">
-  <h2 class="text-center">Add User</h2>
+  <h2 class="text-center">Add Expense</h2>
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="username">User Name:</label>
-      <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username">
+      <label for="transactionDate">Transaction Date:</label>
+      <input type="text" formControlName="transactionDate" placeholder="transactionDate" name="transactionDate" class="form-control" id="transactionDate">
     </div>
 
     <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" formControlName="password" placeholder="password" name="password" class="form-control" id="password">
+      <label for="postDate">Post Date:</label>
+      <input type="text" formControlName="postDate" placeholder="postDate" name="postDate" class="form-control" id="postDate">
     </div>
 
     <div class="form-group">
-      <label for="firstName">First Name:</label>
-      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+      <label for="postDate">Description:</label>
+      <input formControlName="description" placeholder="description" name="description" class="form-control" id="description">
     </div>
 
     <div class="form-group">
-      <label for="lastName">Last Name:</label>
-      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+      <label for="category">Category:</label>
+      <input formControlName="category" placeholder="category" name="category" class="form-control" id="category">
     </div>
 
     <div class="form-group">
-      <label for="age">Age:</label>
-      <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+      <label for="type">Type:</label>
+      <input type="text" formControlName="type" placeholder="type" name="type" class="form-control" id="type">
     </div>
 
     <div class="form-group">
-      <label for="salary">Salary:</label>
-      <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
+      <label for="amount">Amount:</label>
+      <input type="number" formControlName="amount" placeholder="amount" name="amount" class="form-control" id="amount">
     </div>
 
     <button class="btn btn-success">Add</button>

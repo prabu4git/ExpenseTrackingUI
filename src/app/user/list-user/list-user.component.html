@@ -1,28 +1,29 @@
-<div class="col-md-6 user-container">
-  <h2 style="margin: auto"> User Details</h2>
-  <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+
+  <h2 style="margin: auto"> Expense List</h2>
+  <button class="btn btn-danger" style="width:150px" (click)="addUser()"> Add Expense</button>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th class="hidden">Id</th>
-      <th>FirstName</th>
-      <th>LastName</th>
-      <th>UserName</th>
-      <th>Age</th>
-      <th>Salary</th>
+      <th>Transaction Date</th>
+      <th>Post Date</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Type</th>
+      <th>Amount</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
-      <td class="hidden">{{user.id}}</td>
-      <td>{{user.firstName}}</td>
-      <td>{{user.lastName}}</td>
-      <td>{{user.username}}</td>
-      <td>{{user.age}}</td>
-      <td>{{user.salary}}</td>
+
+      <td>{{user.transactionDate}}</td>
+      <td>{{user.postDate}}</td>
+      <td>{{user.description}}</td>
+      <td>{{user.category}}</td>
+      <td>{{user.type}}</td>
+      <td>{{user.amount}}</td>
       <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
         <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
     </tr>
     </tbody>
   </table>
-</div>
+

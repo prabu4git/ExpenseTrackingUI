@@ -25,15 +25,16 @@ export class EditUserComponent implements OnInit {
     }
     this.editForm = this.formBuilder.group({
       id: [''],
-      username: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      age: ['', Validators.required],
-      salary: ['', Validators.required]
+      transactionDate: ['', Validators.required],
+      postDate: ['', Validators.required],
+      description: ['', Validators.required],
+      category: ['', Validators.required],
+      type: ['', Validators.required],
+      amount: ['', Validators.required]
     });
-    this.apiService.getUserById(+userId)
+    this.apiService.getUserById(userId)
       .subscribe( data => {
-        this.editForm.setValue(data.result);
+        this.editForm.setValue(data);
       });
   }
 

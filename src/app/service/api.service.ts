@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {User} from "../model/user.model";
 import {Observable} from "rxjs/index";
 import {ApiResponse} from "../model/api.response";
-import {User} from "../model/user.model";
+
 
 @Injectable()
 export class ApiService {
@@ -19,7 +19,7 @@ export class ApiService {
     return this.http.get<User[]>(this.baseUrl);
   }
 
-  getUserById(id: String): Observable<ApiResponse> {
+  getUserById(id: String): Observable<User> {
     return this.http.get<User>(this.baseUrl + id);
   }
 
